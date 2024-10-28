@@ -59,11 +59,3 @@ When you start the application, a main menu appears with the following options:
 5. Exit
 
 Select an option by entering the corresponding number. Follow the prompts to enter required details for each operation.
-
-## Contributing
-
-Feel free to submit issues or pull requests to enhance the functionality of this application. Contributions are welcome!
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
