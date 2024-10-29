@@ -31,7 +31,7 @@ The application contains the following main classes:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/HospitalManagementSystem.git
+    git clone https://github.com/shabbeer10/HospitalManagementSystem.git
     cd HospitalManagementSystem
     ```
 
