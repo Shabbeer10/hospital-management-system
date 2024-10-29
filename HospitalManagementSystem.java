@@ -25,7 +25,7 @@ public class HospitalManagementSystem {
             scanner.nextLine();  // Consume newline
 
             switch (choice) {
-                case 1:
+                case 1 -> {
                     System.out.print("Enter Patient ID: ");
                     int patientId = scanner.nextInt();
                     scanner.nextLine();
@@ -39,9 +39,9 @@ public class HospitalManagementSystem {
 
                     Patient newPatient = new Patient(patientId, patientName, patientAge, patientGender);
                     hospital.registerPatient(newPatient);
-                    break;
+                }
 
-                case 2:
+                case 2 -> {
                     System.out.print("Enter Doctor ID: ");
                     int doctorId = scanner.nextInt();
                     scanner.nextLine();
@@ -54,9 +54,9 @@ public class HospitalManagementSystem {
 
                     Doctor newDoctor = new Doctor(doctorId, doctorName, department, specialization);
                     hospital.addStaff(newDoctor);
-                    break;
+                }
 
-                case 3:
+                case 3 -> {
                     System.out.print("Enter Appointment ID: ");
                     int appointmentId = scanner.nextInt();
                     scanner.nextLine();
@@ -66,9 +66,9 @@ public class HospitalManagementSystem {
                     scanner.nextLine();
                     
                     Patient patientForAppointment = hospital.getPatients().stream()
-                        .filter(patient -> patient.getId() == patientIdForAppointment)
-                        .findFirst()
-                        .orElse(null);
+                            .filter(patient -> patient.getId() == patientIdForAppointment)
+                            .findFirst()
+                            .orElse(null);
                     
                     if (patientForAppointment == null) {
                         System.out.println("Patient not found.");
@@ -80,9 +80,9 @@ public class HospitalManagementSystem {
                     scanner.nextLine();
                     
                     Doctor doctorForAppointment = (Doctor) hospital.getStaffList().stream()
-                        .filter(staff -> staff instanceof Doctor && staff.getStaffId() == doctorIdForAppointment)
-                        .findFirst()
-                        .orElse(null);
+                            .filter(staff -> staff instanceof Doctor && staff.getStaffId() == doctorIdForAppointment)
+                            .findFirst()
+                            .orElse(null);
                     
                     if (doctorForAppointment == null) {
                         System.out.println("Doctor not found.");
@@ -108,33 +108,32 @@ public class HospitalManagementSystem {
                     } catch (AppointmentConflictException e) {
                         System.out.println(e.getMessage());
                     }
-                    break;
+                }
 
-                case 4:
+                case 4 -> {
                     System.out.print("Enter Doctor ID to View Schedule: ");
                     int viewDoctorId = scanner.nextInt();
                     scanner.nextLine();
 
                     Doctor viewDoctor = (Doctor) hospital.getStaffList().stream()
-                        .filter(staff -> staff instanceof Doctor && staff.getStaffId() == viewDoctorId)
-                        .findFirst()
-                        .orElse(null);
-
+                            .filter(staff -> staff instanceof Doctor && staff.getStaffId() == viewDoctorId)
+                            .findFirst()
+                            .orElse(null);
+                    
                     if (viewDoctor != null) {
                         viewDoctor.viewSchedule();
                     } else {
                         System.out.println("Doctor not found.");
                     }
-                    break;
+                }
 
-                case 5:
+                case 5 -> {
                     System.out.println("Exiting...");
                     scanner.close();
                     System.exit(0);
-                    break;
+                }
 
-                default:
-                    System.out.println("Invalid option. Please try again.");
+                default -> System.out.println("Invalid option. Please try again.");
             }
         }
     }
