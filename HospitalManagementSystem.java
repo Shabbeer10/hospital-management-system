@@ -3,6 +3,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * The `HospitalManagementSystem` class in Java provides a console-based interface for managing
+ * patients, doctors, appointments, and schedules in a hospital setting.
+ */
 public class HospitalManagementSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
