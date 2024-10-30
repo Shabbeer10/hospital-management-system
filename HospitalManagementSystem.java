@@ -1,5 +1,5 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.text.ParseException; // Signals that an error has been reached unexpectedly while parsing.
+import java.text.SimpleDateFormat; // for formatting and parsing dates
 import java.util.Date;
 import java.util.Scanner;
 
