@@ -13,7 +13,6 @@ A console-based Java application that simulates a basic Hospital Management Syst
 
 - **Java**: Core programming language used for development.
 - **OOP Principles**: Classes, inheritance, polymorphism, and exception handling.
-- **Date and Time Parsing**: SimpleDateFormat used to manage dates for appointments.
 
 ## Project Structure
 

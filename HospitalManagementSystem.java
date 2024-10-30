@@ -22,7 +22,7 @@ public class HospitalManagementSystem {
 
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1 -> {
